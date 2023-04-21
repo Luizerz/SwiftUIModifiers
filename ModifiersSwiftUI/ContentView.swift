@@ -1,0 +1,47 @@
+//
+//  ContentView.swift
+//  ModifiersSwiftUI
+//
+//  Created by Luiz Sena on 20/04/23.
+//
+
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        GeometryReader { geo in
+            ZStack {
+                Rectangle()
+                    .ignoresSafeArea()
+                    .foregroundColor(.clear)
+                ScrollView {
+                    VStack {
+                        Circle()
+                            .frame(width: 50, height: 50)
+                            .cardModifier(width: geo.size.width/2, height: geo.size.height/4)
+                            .padding()
+                        Text("SecondText")
+                            .cardModifier(width: geo.size.width/2, height: geo.size.height/4)
+                            .padding()
+                        Button {
+                            print("Nice!")
+                        } label: {
+                            Text("I'm a Button")
+                                .cardModifier(width: geo.size.width/3, height: geo.size.height/10)
+
+                        }.padding()
+
+                    }
+                    .frame(width: geo.size.width)
+                }
+            }
+        }
+
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
