@@ -18,16 +18,17 @@ struct ContentView: View {
                     VStack {
                         Circle()
                             .frame(width: 50, height: 50)
-                            .cardModifier(width: geo.size.width/2, height: geo.size.height/4)
+                            .cardModifier(width: geo.size.width/2, height: geo.size.height/4, animationType: .linear)
                             .padding()
                         Text("SecondText")
-                            .cardModifier(width: geo.size.width/2, height: geo.size.height/4)
+                            .cardModifier(width: geo.size.width/2, height: geo.size.height/4, animationType: .linear)
                             .padding()
                         Button {
                             print("Nice!")
                         } label: {
                             Text("I'm a Button")
-                                .cardModifier(width: geo.size.width/3, height: geo.size.height/10)
+                                .cardModifier(width: geo.size.width/3, height: geo.size.height/10, animationType:
+                                        .easeInOut)
 
                         }.padding()
 
