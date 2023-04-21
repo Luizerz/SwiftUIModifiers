@@ -46,7 +46,7 @@ struct MyCard: ViewModifier {
         case .easeInOut:
             return .easeInOut(duration: 2).delay(0.5).repeatForever(autoreverses: false)
         case .linear:
-            return .linear
+            return .linear(duration: 5).repeatForever()
         default:
             return .linear
         }
