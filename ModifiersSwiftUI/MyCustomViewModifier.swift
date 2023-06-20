@@ -20,6 +20,12 @@ extension View {
             MyCard(geo: (width, height), animationType: animationType)
         )
     }
+
+    func windowOpeningModifier() -> some View {
+        modifier(
+            WindowOpening()
+        )
+    }
 }
 
 struct MyCard: ViewModifier {
@@ -49,6 +55,52 @@ struct MyCard: ViewModifier {
             return .linear(duration: 5).repeatForever()
         default:
             return .linear
+        }
+    }
+}
+
+struct WindowOpening: ViewModifier {
+    @State var isOpening: Bool = false
+    func body(content: Content) -> some View {
+            content
+                .overlay {
+                    HStack {
+                        GeometryReader { geo in
+                            HStack {
+                                Spacer()
+                                RoundedRectangle(cornerRadius: 5)
+                                    .fill(.pink)
+                                    .frame(width: isOpening ? 0 : geo.size.width)
+                            }
+                            .frame(width: geo.size.width)
+                        }
+                    }
+                    .clipped()
+                }
+
+
+        .onAppear {
+            withAnimation(.easeOut(duration: 5)) {
+                isOpening = true
+            }
+
+        }
+
+    }
+}
+
+
+struct ModifiersProvider_Previews: PreviewProvider {
+    static var previews: some View {
+        VStack {
+            Spacer()
+            Circle()
+                .frame(width: 50, height: 50)
+                .cardModifier(width: 100, height: 100, animationType: .easeInOut)
+            Spacer()
+            Text("Hello World")
+                .windowOpeningModifier()
+            Spacer()
         }
     }
 }

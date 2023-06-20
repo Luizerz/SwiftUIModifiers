@@ -29,9 +29,15 @@ struct ContentView: View {
                             Text("I'm a Button")
                                 .cardModifier(width: geo.size.width/3, height: geo.size.height/10, animationType:
                                         .easeInOut)
-
-                        }.padding()
-
+                        }
+                        .padding()
+                        //                        TextField("Text Field", text: .constant("Text Field"))
+                        //                            .textFieldStyle(.roundedBorder)
+                        //                            .frame(width: 150)
+                        //                            .shadow(color: .primary, radius: 1)
+                        //                            .modifier(WindowOpening())
+                        //                            .multilineTextAlignment(.center)
+                        //                            .padding()
                     }
                     .frame(width: geo.size.width)
                 }

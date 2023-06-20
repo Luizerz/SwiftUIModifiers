@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F2E3F402A1BD7A000BE781C /* MyContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E3F3F2A1BD79F00BE781C /* MyContainerView.swift */; };
 		4FE5FE9929F2237E007C89BD /* ModifiersSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5FE9829F2237E007C89BD /* ModifiersSwiftUIApp.swift */; };
 		4FE5FE9B29F2237E007C89BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE5FE9A29F2237E007C89BD /* ContentView.swift */; };
 		4FE5FE9D29F2237F007C89BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FE5FE9C29F2237F007C89BD /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F2E3F3F2A1BD79F00BE781C /* MyContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContainerView.swift; sourceTree = "<group>"; };
 		4FE5FE9529F2237E007C89BD /* ModifiersSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModifiersSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FE5FE9829F2237E007C89BD /* ModifiersSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifiersSwiftUIApp.swift; sourceTree = "<group>"; };
 		4FE5FE9A29F2237E007C89BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				4FE5FE9829F2237E007C89BD /* ModifiersSwiftUIApp.swift */,
 				4FE5FE9A29F2237E007C89BD /* ContentView.swift */,
+				4F2E3F3F2A1BD79F00BE781C /* MyContainerView.swift */,
 				4FE5FEA629F22EFA007C89BD /* MyCustomViewModifier.swift */,
 				4FE5FE9C29F2237F007C89BD /* Assets.xcassets */,
 				4FE5FE9E29F2237F007C89BD /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2E3F402A1BD7A000BE781C /* MyContainerView.swift in Sources */,
 				4FE5FEA729F22EFA007C89BD /* MyCustomViewModifier.swift in Sources */,
 				4FE5FE9B29F2237E007C89BD /* ContentView.swift in Sources */,
 				4FE5FE9929F2237E007C89BD /* ModifiersSwiftUIApp.swift in Sources */,
